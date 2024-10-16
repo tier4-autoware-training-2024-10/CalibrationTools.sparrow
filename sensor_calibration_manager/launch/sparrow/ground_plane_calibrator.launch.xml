@@ -1,6 +1,6 @@
 <launch>
   <arg name="base_frame" default="base_link" description="Base frame"/>
-  <arg name="lidar_frame" default="velodyne_top_base_link" description="Lidar's frame"/>
+  <arg name="lidar_frame" default="velodyne_top" description="Lidar's frame"/>
   <arg name="pointcloud_topic" default="/sensing/lidar/top/pointcloud_raw_ex" description="Topic of the lidar to calibrate"/>
 
   <arg name="max_inlier_distance" default="0.03" description="Maximum distance in meters to consider inliers in plane estimation"/>
@@ -13,11 +13,11 @@
   <arg name="filter_estimations" default="true" description="Flag to enable filtering estimations"/>
 
   <arg name="use_crop_box_filter" default="true" description="Use an optional crop box filter to accelerate processing and ignore walls or other planes"/>
-  <arg name="crop_box_min_x" default="-50.0" description="Minimum x value of the crop box filter"/>
-  <arg name="crop_box_min_y" default="-50.0" description="Minimum y value of the crop box filter"/>
+  <arg name="crop_box_min_x" default="-4.5" description="Minimum x value of the crop box filter"/>
+  <arg name="crop_box_min_y" default="-2.5" description="Minimum y value of the crop box filter"/>
   <arg name="crop_box_min_z" default="-50.0" description="Minimum z value of the crop box filter"/>
-  <arg name="crop_box_max_x" default="50.0" description="Maximum x value of the crop box filter"/>
-  <arg name="crop_box_max_y" default="50.0" description="Maximum y value of the crop box filter"/>
+  <arg name="crop_box_max_x" default="4.5" description="Maximum x value of the crop box filter"/>
+  <arg name="crop_box_max_y" default="2.5" description="Maximum y value of the crop box filter"/>
   <arg name="crop_box_max_z" default="50.0" description="Maximum z value of the crop box filter"/>
   <arg name="use_pca_rough_normal" default="false" description="Whether to use PCA or the initial calibration for normal plane estimation"/>
 
